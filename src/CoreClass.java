@@ -1,8 +1,8 @@
-import infopulse.beginnertask.begin.CubeCalculator;
+import infopulse.beginnertask.begin.*;
 import infopulse.beginnertask.bool.OddNumber;
-import infopulse.beginnertask.integer.DayOfTheWeekFinder;
-import infopulse.beginnertask.integer.secondsToMinutes;
-import infopulse.beginnertask.begin.CircleCalculator;
+import infopulse.beginnertask.integer.*;
+
+
 
 public class CoreClass { 
 	public static void main(String[] args) {

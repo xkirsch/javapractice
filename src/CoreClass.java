@@ -3,8 +3,7 @@ import java.util.Scanner;
 import infopulse.beginnertask.begin.*;
 import infopulse.beginnertask.bool.OddNumber;
 import infopulse.beginnertask.integer.*;
-import infopulse.beginnertask.opertorscase.LengthConverter;
-import infopulse.beginnertask.switches.CardIdentifier;
+import infopulse.beginnertask.switches.*;
 
 
 
@@ -33,20 +32,30 @@ public class CoreClass {
 		 * dayOfYear));
 		 */
 		// Задача Case 15
-		Scanner newCard = new Scanner(System.in);
-		System.out.println("Enter the number from 6 to 14");
-		int cardName = newCard.nextInt();
-		if (cardName > 14 || 6 > cardName) {
-			System.out.println("ERROR!");
-		} else {
-			System.out.println("Enter the number from 1 to 4");
-			int cardSuit = newCard.nextInt();
-			if (cardSuit > 4 || 1 > cardName) {
-				System.out.println("ERROR!");
-			} else {
-				CardIdentifier.cardSuitName(cardName, cardSuit);
-			}
-		}
+		/*
+		 * Scanner newCard = new Scanner(System.in);
+		 * System.out.println("Enter the number from 6 to 14"); int cardName =
+		 * newCard.nextInt(); if (cardName > 14 || 6 > cardName) {
+		 * System.out.println("ERROR!"); } else {
+		 * System.out.println("Enter the number from 1 to 4"); int cardSuit =
+		 * newCard.nextInt(); if (cardSuit > 4 || 1 > cardName) {
+		 * System.out.println("ERROR!"); } else { CardIdentifier.cardSuitName(cardName,
+		 * cardSuit); } }
+		 */
+		//задача Case 6
+		/*
+		 * Scanner newConverter =new Scanner(System.in);
+		 * System.out.println("Enter the number from 1 to 5"); int valueToConvert =
+		 * newConverter.nextInt(); System.out.println("Enter the number"); double
+		 * lengthInMeters = newConverter.nextDouble();
+		 * LengthConverter.convertToMeters(valueToConvert, lengthInMeters);
+		 */
+		//задача Case 3
+				
+		Scanner newMonth = new Scanner(System.in);
+		System.out.println("Enter the number from 1 to 12");
+		int numberMonth = newMonth.nextInt();
+		SeasonsOfYear.conformityOfMonth(numberMonth);
 
 	}
 }

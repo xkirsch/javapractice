@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 import infopulse.beginnertask.begin.*;
 import infopulse.beginnertask.bool.OddNumber;
+import infopulse.beginnertask.cyclesfor.CandyPrice;
 import infopulse.beginnertask.integer.*;
 import infopulse.beginnertask.switches.*;
 
@@ -52,10 +53,16 @@ public class CoreClass {
 		 */
 		//задача Case 3
 				
-		Scanner newMonth = new Scanner(System.in);
-		System.out.println("Enter the number from 1 to 12");
-		int numberMonth = newMonth.nextInt();
-		SeasonsOfYear.conformityOfMonth(numberMonth);
-
+		/*
+		 * Scanner newMonth = new Scanner(System.in);
+		 * System.out.println("Enter the number from 1 to 12"); int numberMonth =
+		 * newMonth.nextInt(); SeasonsOfYear.conformityOfMonth(numberMonth);
+		 */
+		//задача For 4
+		
+		 Scanner newPrice = new Scanner(System.in);
+		 System.out.println("Enter the number ");
+		 int priceKg = newPrice.nextInt();
+		 CandyPrice.getPrice(priceKg);
 	}
 }

@@ -1,6 +1,6 @@
 package infopulse.beginnertask.hierarchyclasses;
 
-public class Ship extends Vehicle {
+public class Ship extends Vehicle implements SwimAble {
 
 private int numberOfPassengers;
 private String homePort;
@@ -33,4 +33,10 @@ public String toString() {
 	return "Ship " + getModelName() + " [coordinate x = " + getGpsX() + ", coordinate y = " + getGpsY() + ", price = " + getPrice() +" USD, speed = " + getSpeed() + ", year of manufacture = " + getYearOfManufacture() + " , number of passengers = " + numberOfPassengers + ", home port = " + homePort
 			+ "]";
 }
+
+@Override
+public int swim() {
+	return getSpeed()/2;
 }
+}
+

@@ -16,7 +16,7 @@ public class Program {
 	Vehicle plane2 =  new Plane("Airbus A380", 30.88368130323026, 38.36427191335559,489000.00, 1185,2015,525, 9000 );
 	Vehicle plane3 =  new Plane("Embraer 190", 12.193919676146223, 55.09487293321987,2050000.00, 871,2017,114, 8500 );
 	
-	Vehicle [] transport = new Vehicle [8];
+	Vehicle [] transport = new Vehicle [10];
 	transport[0] = car1;
 	transport[1] = car2;
 	transport[2] = ship1;
@@ -25,6 +25,9 @@ public class Program {
 	transport[5] = plane1;
 	transport[6] = plane2;
 	transport[7] = plane3;
+	transport[8] = new Batmobile("Batmobile", 18.964712326487657, 49.69153210304256, 100000.00, 500, 2019);
+	transport[9] = new Amfibia ("Amfibia", 12.8715169166677646, 35.378093336069084, 255000.00,1340, 1989,
+			5, "Odessa");
 	
 		// 1
 		double max = transport[0].getPrice();
@@ -98,6 +101,67 @@ public class Program {
 		    	{System.out.println(notOlderFiveYears.get(i).getModelName());}
 		    	
 		    }
+		 // 6
+			int countCar = 0;
+			int countPlane = 0;
+			ArrayList<Vehicle> listOfCars = new ArrayList<Vehicle>();
+			for (Vehicle item : transport) {
+				if (item.getClass().equals(Car.class)) {
+					listOfCars.add(item);
+					countCar++;
+				}
+				if (item.getClass().equals(Plane.class)) {
+					countPlane++;
+				}
+			}
+			System.out.println(
+					"\n6.There are " + countCar + " cars in this list.\nThere are " + countPlane + " planes in this list.");
+			//7
+			double minCar = listOfCars.get(0).getPrice();
+			String minNameCar =listOfCars.get(0).getModelName();
+			for (int i = 1; i < listOfCars.size(); i++) {
+				if (minCar >listOfCars.get(i).getPrice()) {
+					minCar = listOfCars.get(0).getPrice();
+					minNameCar = listOfCars.get(0).getModelName();
+				}
+			}
+			System.out.println("\n7. Car with the lowest price is " + minNameCar + ", whose value is " + minCar + " USD.");
 			
+			//8
+			ArrayList<Vehicle> ListOfShips = new ArrayList<Vehicle>();
+			System.out.println("\n8. List of ships with year of manufacture from 2000 to 2010:\n");
+			for (Vehicle item : transport) {
+				if (item.getClass().equals(Ship.class)) {
+					ListOfShips.add(item);
+					if (item.getYearOfManufacture() >= 2000 && item.getYearOfManufacture() <= 2010) {
+						System.out.println(item.getModelName());
+					}
+				}
+			
+		}
+			System.out.println("\nList of *moveable* vehicles:\n");
+			ArrayList<Vehicle> ListOfMoveable = new ArrayList<Vehicle>();
+			for (Vehicle item : transport){
+			if (item instanceof MoveAble){
+				ListOfMoveable.add(item);
+				System.out.println(item.getModelName());
+			}
+	} 
+			System.out.println("\nList of *flyable* vehicles:\n");
+			ArrayList<Vehicle> ListOfFlyable = new ArrayList<Vehicle>();
+			for (Vehicle item : transport){
+			if (item instanceof FlyAble){
+				ListOfFlyable.add(item);
+				System.out.println(item.getModelName());
+			}
+	} 
+			System.out.println("\nList of *swimable* vehicles:\n");
+			ArrayList<Vehicle> ListOfSwimable = new ArrayList<Vehicle>();
+			for (Vehicle item : transport){
+			if (item instanceof SwimAble){
+				ListOfSwimable.add(item);
+				System.out.println(item.getModelName());
+			}
+	} 
 	}
 }

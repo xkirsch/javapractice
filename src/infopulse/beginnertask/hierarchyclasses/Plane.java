@@ -1,6 +1,6 @@
 package infopulse.beginnertask.hierarchyclasses;
 
-public class Plane extends Vehicle {
+public class Plane extends Vehicle implements FlyAble{
 	
 	private int numberOfPassengers;
 	private int height;
@@ -29,6 +29,11 @@ public class Plane extends Vehicle {
 		return "Plane " +getModelName() +"[coordinate x = " + getGpsX() + ", coordinate y = " + getGpsY() + ", price = " + getPrice()
 				+ " speed = " + getSpeed() + ", year of manufacture = " + getYearOfManufacture() + ", number of passengers = " + numberOfPassengers + ", height=" + height
 				+"]";
+	}
+
+	@Override
+	public int fly() {
+		return getSpeed()*3;
 	}
 	
 }

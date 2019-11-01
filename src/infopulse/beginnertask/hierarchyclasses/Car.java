@@ -1,6 +1,6 @@
 package infopulse.beginnertask.hierarchyclasses;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements MoveAble {
 
 	public Car(String modelName, double gpsX, double gpsY, double price, int speed, int yearOfManufacture) {
 		super(modelName, gpsX, gpsY, price, speed, yearOfManufacture);
@@ -13,4 +13,10 @@ public class Car extends Vehicle {
 				+ " USD, speed = " + getSpeed() + ", year of manufacture = " + getYearOfManufacture() + "]";
 	}
 
+	@Override
+	public int move() {
+		return getSpeed();
+	}
+
 }
+

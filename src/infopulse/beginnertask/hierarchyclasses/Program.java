@@ -139,6 +139,7 @@ public class Program {
 				}
 			
 		}
+			//9 and 10
 			System.out.println("\nList of *moveable* vehicles:\n");
 			ArrayList<Vehicle> ListOfMoveable = new ArrayList<Vehicle>();
 			for (Vehicle item : transport){
@@ -147,6 +148,8 @@ public class Program {
 				System.out.println(item.getModelName());
 			}
 	} 
+			HelperMethods.ValueAveragePrice(ListOfMoveable);
+	
 			System.out.println("\nList of *flyable* vehicles:\n");
 			ArrayList<Vehicle> ListOfFlyable = new ArrayList<Vehicle>();
 			for (Vehicle item : transport){
@@ -154,7 +157,7 @@ public class Program {
 				ListOfFlyable.add(item);
 				System.out.println(item.getModelName());
 			}
-	} 
+	} HelperMethods.ValueAveragePrice(ListOfFlyable);
 			System.out.println("\nList of *swimable* vehicles:\n");
 			ArrayList<Vehicle> ListOfSwimable = new ArrayList<Vehicle>();
 			for (Vehicle item : transport){
@@ -163,5 +166,6 @@ public class Program {
 				System.out.println(item.getModelName());
 			}
 	} 
+			HelperMethods.ValueAveragePrice(ListOfSwimable);
 	}
 }
